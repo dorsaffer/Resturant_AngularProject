@@ -9,6 +9,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MenuComponent } from './menu/menu.component';
 import { MatListModule } from '@angular/material/list';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 
 
 @NgModule({
@@ -18,6 +21,9 @@ import { MatListModule } from '@angular/material/list';
   ],
   imports: [
     BrowserModule,
+    MatGridListModule,
+    MatCardModule,
+    MatButtonModule,
     AppRoutingModule,
     MatListModule,
     MatSliderModule,
