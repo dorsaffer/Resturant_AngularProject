@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { LeaderService } from '../services/leader.service';
 import { Leader } from '../shared/leader';
+import { LEADERS } from '../shared/leaders';
 
 @Component({
   selector: 'app-about',
@@ -16,7 +17,7 @@ leaders:Leader[]
     private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.leaders=this.leaderservice.getLeaders()
+   this.leaderservice.getLeaders().then(LEADERS => this.leaders =LEADERS)
 
   }
 
