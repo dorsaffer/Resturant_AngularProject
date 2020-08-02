@@ -14,16 +14,21 @@ import { Leader } from '../shared/leader';
 export class HomeComponent implements OnInit {
   dish: Dish;
   promotion: Promotion;
-  leader :Leader;
+  leader: Leader;
 
   constructor(
-    private dishservice: DishService, private leaderService :LeaderService,
+    private dishservice: DishService,
+    private leaderService: LeaderService,
     private promotionservice: PromotionService
   ) {}
 
   ngOnInit(): void {
-    this.dishservice.getFeaturedDish().then((dish) => this.dish= dish );
+    this.dishservice
+      .getFeaturedDish()
+      .subscribe((dishes) => (this.dish = dishes));
     this.promotion = this.promotionservice.getFeaturedPromotion();
-   this.leaderService.getfeaturedLeader().then(leader => this.leader =leader );
+    this.leaderService
+      .getfeaturedLeader()
+      .then((leader) => (this.leader = leader));
   }
 }
