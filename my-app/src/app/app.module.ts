@@ -35,7 +35,8 @@ import { PromotionService } from './services/promotion.service';
 import { LeaderService } from './services/leader.service';
 import { LoginComponent } from './login/login.component';
 import { baseURL } from './shared/baseurl';
-import { ProcessHttpService } from './services/process-http.service'
+import { ProcessHttpService } from './services/process-http.service';
+import { HighlightDirective } from './directives/highlight.directive'
 
 
 @NgModule({
@@ -49,6 +50,7 @@ import { ProcessHttpService } from './services/process-http.service'
     ContactComponent,
     AboutComponent,
     LoginComponent,
+    HighlightDirective,
   
   ],
   imports: [
