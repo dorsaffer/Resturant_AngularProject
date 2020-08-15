@@ -37,7 +37,7 @@ import { LoginComponent } from './login/login.component';
 import { baseURL } from './shared/baseurl';
 import { ProcessHttpService } from './services/process-http.service';
 import { HighlightDirective } from './directives/highlight.directive'
-
+import { FeedBackService } from './services/feed-back.service'
 
 @NgModule({
   declarations: [
@@ -76,7 +76,7 @@ import { HighlightDirective } from './directives/highlight.directive'
     ReactiveFormsModule
   ],
   entryComponents: [LoginComponent],
-  providers: [DishService, PromotionService, LeaderService,ProcessHttpService,
+  providers: [DishService, PromotionService, LeaderService,ProcessHttpService,FeedBackService,
               {provide: 'BaseURL', useValue: baseURL}
             ],
   bootstrap: [AppComponent],
